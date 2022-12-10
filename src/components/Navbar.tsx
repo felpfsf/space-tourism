@@ -43,8 +43,8 @@ export const Navbbar = () => {
       <nav
         className={
           navMenu
-            ? 'fixed top-0 right-0 bg-white/40 w-3/4 h-screen transition-all duration-300 backdrop-blur-3xl flex items-start justify-center pt-32'
-            : 'fixed top-0 -right-[100%] bg-white/40 w-3/4 h-screen transition-all duration-300 backdrop-blur-3xl flex items-start justify-center  pt-32'
+            ? 'fixed top-0 right-0 bg-white/5 w-3/4 h-screen transition-all duration-300 backdrop-blur-3xl flex items-start justify-center pt-32'
+            : 'fixed top-0 -right-[100%] bg-white/5 w-3/4 h-screen transition-all duration-300 backdrop-blur-3xl flex items-start justify-center  pt-32'
         }>
         <ul
           className='flex flex-col gap-8 text-white uppercase font-barlowCond'
@@ -62,8 +62,8 @@ export const Navbbar = () => {
         </ul>
       </nav>
       {/* DESKTOP */}
-      <nav className='relative w-[65%] lg:w-full max-w-[830px] h-24 bg-white/40 self-stretch md:flex items-center justify-center backdrop-blur-3xl hidden'>
-        <div className='absolute w-1/2 h-[1px] bg-white/25 -left-96 hidden lg:block'></div>
+      <nav className='relative w-[65%] lg:w-full max-w-[830px] h-24 bg-white/5 self-stretch md:flex items-center justify-center backdrop-blur-3xl hidden'>
+        <div className='absolute w-[57%] xl2:w-full h-[1px] bg-white/25 -left-[53%] xl2:-left-[97%] hidden lg:block'></div>
         <ul className='flex gap-[50px] text-white uppercase font-barlowCond'>
           {menuItems.map(({ id, spanLabel, label, navUrl }) => (
             <li key={id} className='tracking-[2.7px]'>
