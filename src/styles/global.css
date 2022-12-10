@@ -5,3 +5,7 @@
 body {
   @apply bg-blue_900 font-barlow text-violet_100 antialiased;
 }
+
+.home_background {
+  @apply bg-[url("/home/background-home-mobile.jpg")] md:bg-[url("/home/background-home-tablet.jpg")] lg:bg-[url("/home/background-home-desktop.jpg")] bg-cover bg-center;
+}
