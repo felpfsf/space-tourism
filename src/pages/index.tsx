@@ -2,8 +2,8 @@ import Link from 'next/link'
 
 export default function App() {
   return (
-    <main className='w-full h-screen mx-auto px-6 pt-14 lg:px-[165px] flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-4 lg:gap-0 home_background'>
-      <div className='flex flex-col items-center lg:items-start gap-4 max-w-[450px] w-full'>
+    <main className='w-full h-screen mx-auto px-6 lg:px-[165px] flex flex-col lg:flex-row justify-center lg:justify-between items-center home_background'>
+      <div className='flex flex-col items-center lg:items-start gap-4 max-w-[450px] min-w-[327px] w-full'>
         <h2 className='md:text-[28px] tracking-widest md:tracking-[3.4px] lg:tracking-[4.7008px] font-barlowCond'>
           SO, YOU WANT TO TRAVEL TO
         </h2>
@@ -19,7 +19,7 @@ export default function App() {
       </div>
       <Link
         href={'/destination'}
-        className='top-[8%] z-10 relative flex items-center justify-center text-xl text-black uppercase bg-white rounded-full font-belleFair w-36 h-36 sm:w-[274px] sm:h-[274px] before:inset-0 before:absolute lg:hover:before:-inset-24 hover:before:bg-white/20 before:transition-all before:duration-300 before:rounded-full'>
+        className='top-[8%] z-10 relative flex items-center justify-center text-xl text-black uppercase bg-white rounded-full font-belleFair w-36 h-36 sm:w-[274px] sm:h-[274px] before:inset-0 before:absolute lg:hover:before:-inset-1 hover:before:bg-white/20 before:rounded-full lg:before:hover:animate-ping'>
         Explore
       </Link>
     </main>
