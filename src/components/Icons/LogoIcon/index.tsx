@@ -1,7 +1,7 @@
 const LogoIcon = () => {
   return (
     <svg xmlns='http://www.w3.org/2000/svg' width='48' height='48'>
-      <g fill='none' fill-rule='evenodd'>
+      <g fill='none' fillRule='evenodd'>
         <circle cx='24' cy='24' r='24' fill='#FFF' />
         <path
           fill='#0B0D17'
