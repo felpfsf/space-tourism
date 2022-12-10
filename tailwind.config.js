@@ -13,7 +13,8 @@ module.exports = {
         violet_100: '#D0D6F9'
       },
       screens:{
-        lg:'1440px'
+        lg:'1440px',
+        xl2:'1780px'
       }
     }
   },
