@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function App() {
   return (
-    <main className='w-full h-screen mx-auto px-6 lg:px-[165px] flex flex-col lg:flex-row justify-center lg:justify-between items-center home_background'>
+    <main className='w-full h-screen mx-auto px-6 lg:px-[165px] flex flex-col lg:flex-row justify-center lg:justify-around lg:gap-24 items-center home_background'>
       <div className='flex flex-col items-center lg:items-start gap-4 max-w-[450px] min-w-[327px] w-full'>
         <h2 className='md:text-[28px] tracking-widest md:tracking-[3.4px] lg:tracking-[4.7008px] font-barlowCond'>
           SO, YOU WANT TO TRAVEL TO
