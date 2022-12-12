@@ -19,7 +19,7 @@ export default function App() {
       </div>
       <Link
         href={'/destination'}
-        className='top-[8%] z-10 relative flex items-center justify-center text-xl text-black uppercase bg-white rounded-full font-belleFair w-36 h-36 sm:w-[274px] sm:h-[274px] before:inset-0 before:absolute lg:hover:before:-inset-1 hover:before:bg-white/20 before:rounded-full lg:before:hover:animate-ping'>
+        className='top-[8%] z-[9] relative flex items-center justify-center text-xl text-black uppercase bg-white rounded-full font-belleFair w-36 h-36 sm:w-[274px] sm:h-[274px] before:inset-0 before:absolute lg:hover:before:-inset-1 hover:before:bg-white/20 before:rounded-full lg:before:hover:animate-ping'>
         Explore
       </Link>
     </main>
