@@ -34,7 +34,7 @@ export default function Destination({ destination }: IDestinationProps) {
             <MotionDiv motionKey={destination[content].id}>
               <Image
                 src={destination[content].imgWebp}
-                alt={''}
+                alt={destination[content].name}
                 width={445}
                 height={445}
                 className='object-cover w-full h-full'
@@ -43,18 +43,18 @@ export default function Destination({ destination }: IDestinationProps) {
           </div>
 
           <div className='flex flex-col items-center lg:items-start lg:max-w-md justify-self-center place-self-center'>
-            <div className='flex gap-4 md:gap-8'>
+            <div className='flex items-center gap-4 md:gap-8'>
               {destination.map((item, index) => (
-                <span
+                <button
                   className={`cursor-pointer uppercase text-sm tracking-[2.36px] md:text-base ${
                     content === index ? 'border-b-2 pb-2 text-white' : ''
                   }`}
                   key={item.id}
                   onClick={e => {
                     setContent(index)
-                  }}>
+                  }} role='button'>
                   {item.name}
-                </span>
+                </button>
               ))}
             </div>
 
