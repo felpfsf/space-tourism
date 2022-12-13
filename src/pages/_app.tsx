@@ -1,6 +1,7 @@
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 import { Navbbar } from '../components/Navbar'
+import {AnimatePresence} from 'framer-motion'
 import '../styles/global.css'
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -16,8 +17,10 @@ export default function App({ Component, pageProps }: AppProps) {
         />
         <title>Space Tourism</title>
       </Head>
-      <Navbbar />
-      <Component {...pageProps} />
+      <AnimatePresence mode='wait' initial={false}>
+        <Navbbar />
+        <Component {...pageProps} />
+      </AnimatePresence>
     </>
   )
 }
