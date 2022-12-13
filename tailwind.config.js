@@ -10,11 +10,12 @@ module.exports = {
       },
       colors: {
         blue_900: '#0B0D17',
-        violet_100: '#D0D6F9'
+        violet_100: '#D0D6F9',
+        gray_900: '#383B4B'
       },
-      screens:{
-        lg:'1440px',
-        xl2:'1780px'
+      screens: {
+        lg: '1440px',
+        xl2: '1780px'
       }
     }
   },
