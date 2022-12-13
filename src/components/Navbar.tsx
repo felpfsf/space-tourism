@@ -1,10 +1,9 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useEffect, useRef, useState } from 'react'
+import { useState } from 'react'
 import { LogoIcon, MenuCloseIcon, MenuIcon } from './Icons'
 
 export const Navbbar = () => {
-  const navRef = useRef<any>(null)
   const { asPath } = useRouter()
   const [navMenu, setNavMenu] = useState(false)
   const handleNavMenu = () => {
@@ -17,18 +16,8 @@ export const Navbbar = () => {
     { id: 4, spanLabel: '03', label: 'Technology', navUrl: '/technology' }
   ]
 
-  // useEffect(() => {
-  //   const checkOutsideMenuClick = (e: any ) => {
-  //     if (navMenu && navRef.current && !navRef.current.contains(e.target)) {
-  //       setNavMenu(prev => !prev)
-  //     }
-  //   }
-  //   document.body.addEventListener('mousedown', checkOutsideMenuClick)
-  //   return () => document.removeEventListener('mousedown', checkOutsideMenuClick)
-  // }, [navMenu])
-
   return (
-    <header className='fixed z-10 flex items-center justify-between w-screen p-6 bg-white/5 md:bg-transparent md:pl-6 lg:pl-14 lg:pt-10 md:p-0 backdrop-blur md:backdrop-blur-none'>
+    <header className='fixed z-10 flex items-center justify-between w-screen p-6 bg-white/5 md:bg-transparent md:pl-6 lg:pl-14 lg:pt-10 md:p-0'>
       <LogoIcon />
       {navMenu ? (
         <button className='z-10 block md:hidden' onClick={handleNavMenu}>
@@ -43,12 +32,11 @@ export const Navbbar = () => {
       <nav
         className={
           navMenu
-            ? 'fixed top-0 right-0 bg-white/5 w-3/4 h-screen transition-all duration-300 backdrop-blur-3xl flex items-start justify-center pt-32'
-            : 'fixed top-0 -right-[100%] bg-white/5 w-3/4 h-screen transition-all duration-300 backdrop-blur-3xl flex items-start justify-center  pt-32'
+            ? 'fixed top-0 right-0 bg-white/5 w-3/4 h-screen transition-all duration-300 flex items-start justify-center pt-32 backdrop-blur-3xl border border-white/10 shadow-sm'
+            : 'fixed top-0 -right-[100%] bg-white/5 w-3/4 h-screen transition-all duration-300 backdrop-blur-md flex items-start justify-center pt-32 border border-white/10 shadow-sm'
         }>
         <ul
-          className='flex flex-col gap-8 text-white uppercase font-barlowCond'
-          ref={navRef}>
+          className='flex flex-col gap-8 text-white uppercase font-barlowCond'>
           {menuItems.map(({ id, spanLabel, label, navUrl }) => (
             <li key={id} className='tracking-[2.7px]'>
               <Link href={navUrl} onClick={handleNavMenu}>
