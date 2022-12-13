@@ -1,12 +1,12 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { ReactNode } from 'react'
 
-interface IMotionDivProps {
+interface MotionDivProps {
   children: ReactNode
   motionKey: number
 }
 
-const MotionDiv = ({ children, motionKey }: IMotionDivProps) => {
+const MotionDiv = ({ children, motionKey }: MotionDivProps) => {
   const variations = {
     enter: { opacity: 0, x: 0 },
     visible: { opacity: 1, x: 0 },
