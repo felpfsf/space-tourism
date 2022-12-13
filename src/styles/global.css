@@ -12,3 +12,6 @@ body {
 .destination_background {
   @apply bg-[url("/destination/background-destination-mobile.jpg")] md:bg-[url("/destination/background-destination-tablet.jpg")] lg:bg-[url("/destination/background-destination-desktop.jpg")] bg-cover bg-center;
 }
+.crew_background {
+  @apply bg-[url("/crew/background-crew-mobile.jpg")] md:bg-[url("/crew/background-crew-tablet.jpg")] lg:bg-[url("/crew/background-crew-desktop.jpg")] bg-cover bg-center;
+}
