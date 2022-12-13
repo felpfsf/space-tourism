@@ -13,8 +13,6 @@ const MotionDiv = ({ children, motionKey }: IMotionDivProps) => {
     exit: { opacity: 0, x: '-100vw' }
   }
 
-  console.log(typeof motionKey)
-
   return (
     <AnimatePresence initial={false} mode='wait'>
       <motion.div
