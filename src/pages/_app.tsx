@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }: AppProps) {
         />
         <title>Space Tourism</title>
       </Head>
-      <AnimatePresence mode='wait' initial={false}>
+      <AnimatePresence initial={false}>
         <Navbbar />
         <Component {...pageProps} />
       </AnimatePresence>
