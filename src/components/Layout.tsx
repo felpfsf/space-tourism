@@ -1,11 +1,11 @@
 import { ReactNode } from 'react'
 import { motion } from 'framer-motion'
 
-export interface ILayoutProps {
+export interface LayoutProps {
   children: ReactNode
 }
 
-const Layout = ({ children }: ILayoutProps) => {
+const Layout = ({ children }: LayoutProps) => {
   const variations = {
     enter: { opacity: 0, x: -300 },
     visible: { opacity: 1, x: 0 },
