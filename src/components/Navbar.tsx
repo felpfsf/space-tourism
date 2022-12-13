@@ -28,7 +28,7 @@ export const Navbbar = () => {
   // }, [navMenu])
 
   return (
-    <header className='fixed z-10 flex items-center justify-between w-screen p-6 md:pl-6 lg:pl-14 lg:pt-10 md:p-0'>
+    <header className='fixed z-10 flex items-center justify-between w-screen p-6 bg-white/5 md:bg-transparent md:pl-6 lg:pl-14 lg:pt-10 md:p-0 backdrop-blur md:backdrop-blur-none'>
       <LogoIcon />
       {navMenu ? (
         <button className='z-10 block md:hidden' onClick={handleNavMenu}>
