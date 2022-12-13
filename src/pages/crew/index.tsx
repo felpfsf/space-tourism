@@ -3,6 +3,8 @@ import { useState } from 'react'
 import { prisma } from '../../../lib/prisma'
 import Layout from '../../components/Layout'
 import MotionDiv from '../../components/MotionDiv'
+import CrewContent from './components/CrewContent'
+import CrewPic from './components/CrewPic'
 
 interface ICrew {
   bio: string
@@ -27,45 +29,32 @@ export default function Crew({ crew }: ICrewProps) {
             <span className='mr-4 text-white/25'>02</span>Meet your crew
           </h1>
 
-          {/* <div className='h-56 my-6 w-44 md:my-14 place-self-center lg:place-self-start  md:w-[456px] md:h-[532px] border bg-blue-700'> */}
-          <div className='relative w-full h-56 my-6 place-self-center md:my-14 lg:my-0 md:h-[532px] lg:h-[712px] lg:place-self-start'>
-            <MotionDiv motionKey={crew[content].id}>
-              <Image
-                src={crew[content].imgWebp}
-                alt={crew[content].name}
-                fill
-                className='object-scale-down md:object-contain lg:object-fit'
-              />
-            </MotionDiv>
-          </div>
+          <CrewPic
+            idx={crew[content].id}
+            imgAlt={crew[content].name}
+            imgUrl={crew[content].imgWebp}
+          />
 
-          <div className='flex flex-col items-center lg:flex-col-reverse max-w-[612px] lg:items-start justify-self-center place-self-center lg:justify-self-end'>
+          <div className='flex flex-col items-center lg:flex-col-reverse lg:w-[526px] lg:items-start justify-self-center place-self-center'>
             <div className='flex gap-4 md:gap-8'>
               {crew.map((item, index) => (
                 <button
-                  className={`cursor-pointer w-3 h-3 md:w-4 md:h-4 rounded-full ${
+                  className={`cursor-pointer w-3 h-3 md:w-4 md:h-4 rounded-full flex items-center justify-center text-white/0 ${
                     content === index ? 'bg-white' : ' bg-white/20'
                   }`}
                   key={item.id}
-                  onClick={e => {
-                    setContent(index)
-                  }}
-                  role={'button'}></button>
+                  onClick={() => setContent(index)}
+                  role={'button'}>
+                  {item.id}
+                </button>
               ))}
             </div>
-            <MotionDiv motionKey={crew[content].id}>
-              <div className='flex flex-col items-center h-40 my-8 lg:h-[354px] lg:items-start'>
-                <h2 className='uppercase md:text-2xl lg:text-[32px] lg:leading-9 font-belleFair text-white/50'>
-                  {crew[content].role}
-                </h2>
-                <h1 className='text-2xl text-white uppercase md:text-[40px] lg:text-5xl font-belleFair lg:text-left'>
-                  {crew[content].name}
-                </h1>
-                <p className='max-w-md mt-4 text-center lg:text-left lg:text-lg'>
-                  {crew[content].bio}
-                </p>
-              </div>
-            </MotionDiv>
+            <CrewContent
+              bio={crew[content].bio}
+              idx={crew[content].id}
+              name={crew[content].name}
+              role={crew[content].role}
+            />
           </div>
         </div>
       </main>
