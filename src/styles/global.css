@@ -9,3 +9,6 @@ body {
 .home_background {
   @apply bg-[url("/home/background-home-mobile.jpg")] md:bg-[url("/home/background-home-tablet.jpg")] lg:bg-[url("/home/background-home-desktop.jpg")] bg-cover bg-center;
 }
+.destination_background {
+  @apply bg-[url("/destination/background-destination-mobile.jpg")] md:bg-[url("/destination/background-destination-tablet.jpg")] lg:bg-[url("/destination/background-destination-desktop.jpg")] bg-cover bg-center;
+}
