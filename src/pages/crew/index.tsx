@@ -24,7 +24,7 @@ export default function Crew({ crew }: ICrewProps) {
   return (
     <Layout>
       <main className='w-full h-screen px-6 pt-28 lg:pt-0 crew_background'>
-        <div className='grid content-center w-full grid-cols-1 mx-auto lg:grid-cols-2 max-w-[90%] lg:h-screen lg:content-between'>
+        <div className='grid content-center w-full grid-cols-1 mx-auto lg:grid-cols-2 max-w-[95%] lg:h-screen lg:content-between'>
           <h1 className='text-center text-white uppercase lg:mt-36 lg:text-left lg:col-span-2 md:text-xl md:text-left'>
             <span className='mr-4 text-white/25'>02</span>Meet your crew
           </h1>

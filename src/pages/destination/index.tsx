@@ -24,8 +24,8 @@ export default function Destination({ destination }: IDestinationProps) {
   return (
     <Layout>
       <main className='w-full h-screen px-6 pt-28 lg:pt-0 destination_background'>
-        <div className='grid w-full lg:h-screen grid-cols-1 mx-auto max-w-[1350px] lg:grid-cols-2 content-center'>
-          <h1 className='text-center text-white uppercase lg:mt-10 lg:text-left lg:col-span-2 md:text-xl'>
+        <div className='grid w-full lg:h-screen grid-cols-1 mx-auto max-w-[95%] lg:grid-cols-2 content-center lg:pt-12 xl1:pt-0'>
+          <h1 className='text-center text-white uppercase tracking-[3.37px] lg:mt-10 lg:text-left lg:col-span-2 md:text-xl md:text-left font-barlowCond'>
             <span className='mr-4 text-white/25'>01</span>Pick your destination
           </h1>
 
