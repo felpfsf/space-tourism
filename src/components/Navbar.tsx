@@ -51,7 +51,7 @@ export const Navbbar = () => {
       </nav>
       {/* DESKTOP */}
       <nav className='relative w-[65%] lg:w-full max-w-[830px] h-24 bg-white/5 self-stretch md:flex items-center justify-center backdrop-blur-3xl hidden'>
-        <div className='absolute w-[57%] xl2:w-full h-[1px] bg-white/25 -left-[53%] xl2:-left-[97%] hidden lg:block'></div>
+        <div className='absolute w-[50%] xl2:w-full h-[1px] bg-white/25 -left-[45%] xl2:-left-[97%] hidden lg:block'></div>
         <ul className='flex gap-[50px] text-white uppercase font-barlowCond'>
           {menuItems.map(({ id, spanLabel, label, navUrl }) => (
             <li key={id} className='tracking-[2.7px]'>
