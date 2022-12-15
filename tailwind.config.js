@@ -14,7 +14,8 @@ module.exports = {
         gray_900: '#383B4B'
       },
       screens: {
-        lg: '1440px',
+        lg: '1366px',
+        xl1: '1440px',
         xl2: '1780px'
       }
     }
